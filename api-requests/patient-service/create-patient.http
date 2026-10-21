@@ -3,8 +3,8 @@ POST http://localhost:2000/patients/addPatient
 Content-Type: application/json
 
 {
-  "name" : "John Doe Kaf",
-  "email": "test_billing_account_kaf@example.com",
+  "name" : "John Doe Mount test4",
+  "email": "mount_test_4@example.com",
   "address": "123 main street",
   "dateOfBirth": "1998-03-10",
   "registeredDate": "2026-05-14"

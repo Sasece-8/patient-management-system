@@ -29,4 +29,31 @@ public class KafkaProducer {
             log.info("Error sending Patient Created event : {}", event);
         }
     }
+
+//    public void sendEvent(Patient patient) {
+//        PatientEvent event = PatientEvent.newBuilder()
+//                .setPatientId(patient.getId().toString())
+//                .setName(patient.getName())
+//                .setEmail(patient.getEmail())
+//                .setEventType("PATIENT_CREATED")
+//                .build();
+//
+//        try {
+//            kafkaTemplate.send("patient", event.toByteArray())
+//                    .whenComplete((result, exception) -> {
+//                        if (exception != null) {
+//                            log.error("Failed to publish patient event", exception);
+//                        } else {
+//                            log.info(
+//                                    "Patient event published: topic={}, partition={}, offset={}",
+//                                    result.getRecordMetadata().topic(),
+//                                    result.getRecordMetadata().partition(),
+//                                    result.getRecordMetadata().offset()
+//                            );
+//                        }
+//                    });
+//        } catch (Exception e) {
+//            log.error("Error while sending patient event", e);
+//        }
+//    }
 }
